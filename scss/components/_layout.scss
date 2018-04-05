@@ -30,10 +30,46 @@ header {
 }
 
 
-
 main {
   min-height: 100vh;
 }
+
+body {
+  background-color: #eeeee0;
+}
+
+.about,
+.music,
+.booking {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  display: none;
+  transform: translateX(100%);
+  background-color: #eeeee0;
+  border: 2px solid #1f1f14;
+}
+
+
+
+.show {
+  display: block;
+}
+
+.close {
+  font-family: 'Roboto Condensed','Cinzel Decorative', 'Julius Sans One','Alegreya Sans SC',
+  'Open Sans', $helvetica-font-stack;
+  font-weight: 100;
+  color: #1f1f14;
+  display: inline;
+  padding: 10px;
+  margin: 0;
+  position: absolute;
+  top: 0px;
+  cursor: pointer;
+}
+
 
 footer {
   color: $white;

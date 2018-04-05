@@ -25,28 +25,6 @@ header {
   transform: translateY(50%);
 }
 
-.bar1, .bar2, .bar3 {
-    width: 35px;
-    height: 3px;
-    background-color: $white;
-    opacity: .7;
-    margin: 6px 0;
-    transition: 0.4s;
-}
-
-.change .bar1 {
-    -webkit-transform: rotate(-45deg) translate(-9px, 6px);
-    transform: rotate(-45deg) translate(-6px, 3px);
-}
-
-.change .bar2 {
-  opacity: 0;
-}
-
-.change .bar3 {
-    -webkit-transform: rotate(45deg) translate(-8px, -8px);
-    transform: rotate(45deg) translate(-8px, -8px);
-}
 
 
 nav {
@@ -54,14 +32,9 @@ nav {
   display: flex;
   flex-direction: row;
   @extend %center;
-  transition: all .5s cubic-bezier(0.42, 0, 0.58, 1);
-  transform: translateY(-85%) scale(.7);
   opacity: 0;
   pointer-events: none;
   cursor: inherit;
-  @include mq(medium){
-    transform: translateY(-85%);
-  }
   & li {
     transition: transform 2s ease-in;
     border-bottom: 1px solid #fff;
@@ -70,37 +43,17 @@ nav {
     margin: 0;
     margin: 8px;
 
-
-
   }
 }
 
 .changeNav {
-  transition: all .5s cubic-bezier(0.42, 0, 0.58, 1);
-  transform: translateY(0%) scale(.7);
   opacity: .7;
   cursor: pointer;
   pointer-events: auto;
-  @include mq(medium){
-    transform: translateY(0%);
-  }
+
 }
 
-.changeHeading {
-  transition: transform .5s cubic-bezier(0.42, 0, 0.58, 1);
-  transform: translateY(25%) scale(.7);
-  @include mq(medium){
-    transform: translateY(9%);
-  }
-}
 
-.changeSubheading {
-  transition: transform .5s cubic-bezier(0.42, 0, 0.58, 1);
-  transform: translateY(-25%) scale(.7);
-  @include mq(medium){
-    transform: translateY(9%);
-  }
-}
 
 .social-nav {
   display: flex;

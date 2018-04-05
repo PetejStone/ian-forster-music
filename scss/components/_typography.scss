@@ -24,3 +24,11 @@ header {
     font-size: 10px;
   }
 }
+
+.page-heading {
+  font-family:  'Roboto Condensed','Cinzel Decorative', 'Julius Sans One','Alegreya Sans SC',
+  'Open Sans', $helvetica-font-stack;
+  color: #1f1f14;
+  margin-top: 5em;
+  text-align: center;
+}

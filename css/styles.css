@@ -417,37 +417,13 @@ header {
   cursor: pointer;
   transform: translateY(50%); }
 
-.bar1, .bar2, .bar3 {
-  width: 35px;
-  height: 3px;
-  background-color: #fff;
-  opacity: .7;
-  margin: 6px 0;
-  transition: 0.4s; }
-
-.change .bar1 {
-  -webkit-transform: rotate(-45deg) translate(-9px, 6px);
-  transform: rotate(-45deg) translate(-6px, 3px); }
-
-.change .bar2 {
-  opacity: 0; }
-
-.change .bar3 {
-  -webkit-transform: rotate(45deg) translate(-8px, -8px);
-  transform: rotate(45deg) translate(-8px, -8px); }
-
 nav {
   letter-spacing: 1.5px;
   display: flex;
   flex-direction: row;
-  transition: all 0.5s cubic-bezier(0.42, 0, 0.58, 1);
-  transform: translateY(-85%) scale(0.7);
   opacity: 0;
   pointer-events: none;
   cursor: inherit; }
-  @media (min-width: 640px) {
-    nav {
-      transform: translateY(-85%); } }
   nav li {
     transition: transform 2s ease-in;
     border-bottom: 1px solid #fff;
@@ -457,28 +433,9 @@ nav {
     margin: 8px; }
 
 .changeNav {
-  transition: all 0.5s cubic-bezier(0.42, 0, 0.58, 1);
-  transform: translateY(0%) scale(0.7);
   opacity: .7;
   cursor: pointer;
   pointer-events: auto; }
-  @media (min-width: 640px) {
-    .changeNav {
-      transform: translateY(0%); } }
-
-.changeHeading {
-  transition: transform 0.5s cubic-bezier(0.42, 0, 0.58, 1);
-  transform: translateY(25%) scale(0.7); }
-  @media (min-width: 640px) {
-    .changeHeading {
-      transform: translateY(9%); } }
-
-.changeSubheading {
-  transition: transform 0.5s cubic-bezier(0.42, 0, 0.58, 1);
-  transform: translateY(-25%) scale(0.7); }
-  @media (min-width: 640px) {
-    .changeSubheading {
-      transform: translateY(9%); } }
 
 .social-nav {
   display: flex;
@@ -510,6 +467,12 @@ header {
     font-family: "Roboto Condensed", "Cinzel Decorative", "Julius Sans One", "Alegreya Sans SC", "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-size: 10px; }
 
+.page-heading {
+  font-family: "Roboto Condensed", "Cinzel Decorative", "Julius Sans One", "Alegreya Sans SC", "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: #1f1f14;
+  margin-top: 5em;
+  text-align: center; }
+
 header {
   transform: translateY(-15%); }
   header h1, header p {
@@ -532,6 +495,35 @@ header {
 
 main {
   min-height: 100vh; }
+
+body {
+  background-color: #eeeee0; }
+
+.about,
+.music,
+.booking {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  display: none;
+  transform: translateX(100%);
+  background-color: #eeeee0;
+  border: 2px solid #1f1f14; }
+
+.show {
+  display: block; }
+
+.close {
+  font-family: "Roboto Condensed", "Cinzel Decorative", "Julius Sans One", "Alegreya Sans SC", "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 100;
+  color: #1f1f14;
+  display: inline;
+  padding: 10px;
+  margin: 0;
+  position: absolute;
+  top: 0px;
+  cursor: pointer; }
 
 footer {
   color: #fff;
@@ -567,5 +559,63 @@ footer {
 
 .icon-linkedin {
   background-position: -123px 0; }
+
+nav {
+  transition: all 0.5s cubic-bezier(0.42, 0, 0.58, 1);
+  transform: translateY(-85%) scale(0.7); }
+  @media (min-width: 640px) {
+    nav {
+      transform: translateY(-85%); } }
+  nav li {
+    transition: transform 2s ease-in; }
+
+.changeNav {
+  transition: all 0.5s cubic-bezier(0.42, 0, 0.58, 1);
+  transform: translateY(0%) scale(0.7); }
+  @media (min-width: 640px) {
+    .changeNav {
+      transform: translateY(25%); } }
+
+.changeHeading {
+  transition: transform 0.5s cubic-bezier(0.42, 0, 0.58, 1);
+  transform: translateY(25%) scale(0.7); }
+  @media (min-width: 640px) {
+    .changeHeading {
+      transform: translateY(9%); } }
+
+.changeSubheading {
+  transition: transform 0.5s cubic-bezier(0.42, 0, 0.58, 1);
+  transform: translateY(-25%) scale(0.7); }
+  @media (min-width: 640px) {
+    .changeSubheading {
+      transform: translateY(9%); } }
+
+.bar1, .bar2, .bar3 {
+  width: 35px;
+  height: 3px;
+  background-color: #fff;
+  opacity: .7;
+  margin: 6px 0;
+  transition: 0.4s; }
+
+.change .bar1 {
+  -webkit-transform: rotate(-45deg) translate(-9px, 6px);
+  transform: rotate(-45deg) translate(-6px, 3px); }
+
+.change .bar2 {
+  opacity: 0; }
+
+.change .bar3 {
+  -webkit-transform: rotate(45deg) translate(-8px, -8px);
+  transform: rotate(45deg) translate(-8px, -8px); }
+
+.home,
+.about,
+.music,
+.booking {
+  transition: transform 0.5s cubic-bezier(0.42, 0, 0.58, 1); }
+
+.slideIn {
+  transform: translateX(0%); }
 
 /*# sourceMappingURL=styles.css.map */

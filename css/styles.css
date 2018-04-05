@@ -440,13 +440,15 @@ nav {
 .social-nav {
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
+  justify-content: center;
   width: 50%;
   margin: 0 auto;
   padding: 0;
   max-width: 800px;
   transform: scale(0.6);
   opacity: .7; }
+  .social-nav li {
+    margin-right: 15px; }
 
 nav {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -472,6 +474,15 @@ header {
   color: #1f1f14;
   margin-top: 5em;
   text-align: center; }
+
+footer a {
+  font-family: "Cinzel Decorative", "Julius Sans One", "Alegreya Sans SC", "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 8px;
+  font-weight: 100;
+  color: #fff;
+  text-align: center;
+  opacity: .7;
+  margin: 0; }
 
 header {
   transform: translateY(-15%); }
@@ -528,13 +539,15 @@ body {
 footer {
   color: #fff;
   width: 100%;
-  height: 20px;
+  height: 35px;
   background: #1f1f14;
   border-radius: 75% 75%/ 160% 160% 0px 0px;
   display: flex;
   flex-direction: column;
   position: relative;
   bottom: 0px; }
+  footer a {
+    transition: all .3s; }
 
 [class^=icon-] {
   display: block;
@@ -617,5 +630,10 @@ nav {
 
 .slideIn {
   transform: translateX(0%); }
+
+footer > a:hover {
+  transform: scale(1.03);
+  opacity: 1;
+  cursor: pointer; }
 
 /*# sourceMappingURL=styles.css.map */

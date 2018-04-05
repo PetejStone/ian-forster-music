@@ -70,3 +70,10 @@ nav {
 .slideIn {
   transform: translateX(0%);
 }
+
+footer > a:hover {
+  transform: scale(1.03);
+  opacity: 1;
+
+  cursor: pointer;
+}

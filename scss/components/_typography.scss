@@ -32,3 +32,14 @@ header {
   margin-top: 5em;
   text-align: center;
 }
+
+footer a {
+  font-family:  'Cinzel Decorative', 'Julius Sans One','Alegreya Sans SC',
+  'Open Sans', $helvetica-font-stack;
+  font-size: 8px;
+  font-weight: $font-weight--thin;
+  color: $white;
+  text-align: center;
+  opacity: .7;
+  margin: 0;
+}

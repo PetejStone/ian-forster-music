@@ -520,7 +520,8 @@ body {
   display: none;
   transform: translateX(100%);
   background-color: #eeeee0;
-  border: 2px solid #1f1f14; }
+  border: 1px solid #1f1f14;
+  border-radius: 8px; }
 
 .show {
   display: block; }
@@ -559,7 +560,8 @@ footer {
   overflow: hidden;
   transition: all .2s; }
   [class^=icon-]:hover {
-    transform: scale(1.1); }
+    transform: scale(1.1);
+    opacity: 1; }
 
 .icon-instagram {
   background-position: -41px 0; }
@@ -580,7 +582,7 @@ nav {
     nav {
       transform: translateY(-85%); } }
   nav li {
-    transition: transform 2s ease-in; }
+    transition: transform .1s ease-in; }
 
 .changeNav {
   transition: all 0.5s cubic-bezier(0.42, 0, 0.58, 1);
@@ -629,11 +631,15 @@ nav {
   transition: transform 0.5s cubic-bezier(0.42, 0, 0.58, 1); }
 
 .slideIn {
-  transform: translateX(0%); }
+  transform: translateX(0%);
+  max-width: 1200px; }
 
 footer > a:hover {
   transform: scale(1.03);
   opacity: 1;
   cursor: pointer; }
+
+nav li:hover {
+  transform: scale(1.05); }
 
 /*# sourceMappingURL=styles.css.map */

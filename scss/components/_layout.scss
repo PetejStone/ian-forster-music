@@ -48,13 +48,16 @@ body {
   display: none;
   transform: translateX(100%);
   background-color: #eeeee0;
-  border: 2px solid #1f1f14;
+  border: 1px solid #1f1f14;
+  border-radius: 8px;
+
 }
 
 
 
 .show {
   display: block;
+
 }
 
 .close {

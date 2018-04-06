@@ -7,7 +7,7 @@ nav {
     transform: translateY(-85%);
   }
   & li {
-    transition: transform 2s ease-in;
+    transition: transform .1s ease-in;
 
   }
 }
@@ -69,11 +69,15 @@ nav {
 }
 .slideIn {
   transform: translateX(0%);
+  max-width: 1200px;
 }
 
-footer > a:hover {
+footer > a:hover, {
   transform: scale(1.03);
   opacity: 1;
-
   cursor: pointer;
+}
+
+nav li:hover {
+  transform: scale(1.05);
 }

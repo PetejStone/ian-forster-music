@@ -6,7 +6,7 @@ navIcon.addEventListener('click',()=> {
   navIcon.classList.toggle("change");
   navMenu.classList.toggle("changeNav");
   navMenu.previousElementSibling.classList.toggle("changeSubheading");
-  navMenu.previousElementSibling.previousElementSibling.classList.toggle("changeHeading");
+  
 
   for (let i=0; i < mainContent.length; i++) {
     mainContent[i].classList.toggle('show');
@@ -15,6 +15,7 @@ navIcon.addEventListener('click',()=> {
   for (let i=0; i < navMenu.children.length; i++) {
     navMenu.children[i].addEventListener('click', ()=> {
       mainContent[i].classList.toggle('slideIn');
+      console.log([i]);
     });
   }
 

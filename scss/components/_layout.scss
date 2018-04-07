@@ -1,42 +1,27 @@
 header {
   transform: translateY(-15%);
-  & h1,
-  & p {
-    border: 2px solid rgba(255,255,255,.7);
-    background-color: #1f1f14;
-    @extend %center;
+  background-image: url("../images/stars2.jpg");
+  background-size: cover;
 
-  }
-  & h1 {
-    padding: 5px 55px;
-    width: fit-content;
-    @extend %center;
-    transform: translateY(50%) scale(.7);
-    @include mq(medium){
-      transform: translateY(50%);
-    }
-
-  }
-  & p {
-    padding: 5px 15px;
-    z-index: 2;
-    transform: translateY(30%) scale(.7);
-    @include mq(medium){
-      transform: translateY(60%);
-    }
-
-  }
 
 }
 
 
 main {
   min-height: 100vh;
+
 }
 
 body {
   background-color: #eeeee0;
 }
+
+.home-text{
+  margin: 0 .5em;
+  text-align: center;
+}
+
+
 
 .about,
 .music,
@@ -50,6 +35,10 @@ body {
   background-color: #eeeee0;
   border: 1px solid #1f1f14;
   border-radius: 8px;
+  & p {
+    margin: 0 .5em;
+    text-align: center;
+  }
 
 }
 
@@ -79,6 +68,7 @@ body {
   border-radius: 15px;
   box-shadow: 1px 1px 5px $black;
   @extend %center;
+  margin-bottom: 2em;
   & iframe {
     border-radius: 15px;
     box-shadow: 1px 1px 5px $black;
@@ -102,4 +92,85 @@ footer {
   & a {
     transition: all .3s;
   }
+}
+
+
+body {
+  background: #ffffff;
+
+}
+
+
+
+
+.module {
+  width: 400px;
+  position: relative;
+  transform: translateY(35%) scale(.8);
+  transition: all .5s cubic-bezier(0.42, 0, 0.58, 1);
+  @extend %center;
+  padding: 15px 55px;
+  box-sizing: padding-box;
+  position: relative;
+  border-right: 1px solid $white;
+  border-top: 1px solid $white;
+  border-left: 1px solid $white;
+  @include mq(medium){
+    transform: translateY(35%) scale(1);
+  };
+}
+
+.module__top {
+  cursor: move;
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  position: absolute;
+  bottom: -7px;
+  left: 0;
+
+  &:before {
+
+    display: block;
+    content: "";
+    flex: 2 0 0;
+
+    border-top: 1px solid $white;
+  }
+  &:after {
+
+    display: block;
+    content: "";
+    flex: 2 0 0;
+
+    border-top: 1px solid $white;
+  }
+}
+
+.top__content {
+  height: 26px;
+  color: $white;
+  font: 12px/32px Helvetica;
+  font-weight: bold;
+  overflow: hidden;
+  flex: 0 0 65px;
+  margin-top: -18px;
+  text-align: center;
+  margin-right: 10px;
+  margin-left: 10px;
+}
+
+.module__contents {
+  text-align:center;
+  height: 100%;
+  width: 100%;
+  margin: 0;
+}
+
+h1 {
+  margin: 0;
+}
+p {
+  margin: 0;
+  padding: 0px;
 }

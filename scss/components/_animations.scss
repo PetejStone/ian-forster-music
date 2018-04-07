@@ -31,9 +31,9 @@ nav {
 
 .changeSubheading {
   transition: transform .5s cubic-bezier(0.42, 0, 0.58, 1);
-  transform: translateY(-25%) scale(.7);
+  transform: translateY(0%) scale(.8);
   @include mq(medium){
-    transform: translateY(9%);
+    transform: translateY(10%);
   }
 }
 

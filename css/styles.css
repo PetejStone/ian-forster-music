@@ -1,4 +1,4 @@
-#nav-icon, nav, header h1, header p, .music-player {
+#nav-icon, nav, .music-player, .module {
   margin: 0 auto; }
 
 * {
@@ -403,11 +403,13 @@ header {
   width: 100%;
   height: 190px;
   display: block;
-  -webkit-border-radius: 63px 63px 63px 63px / 108px 108px 72px 72px;
-  border-radius: 50% 50% / 0% 0% 96% 96%; }
+  box-shadow: 0px 5px 5px darkgrey; }
+  @media (min-width: 640px) {
+    header {
+      height: 250px;
+      transform-origin: left bottom; } }
   header h1 {
     text-align: center;
-    transform: translateY(85%);
     transition: all 0.5s cubic-bezier(0.42, 0, 0.58, 1); }
   header p {
     transition: all 0.5s cubic-bezier(0.42, 0, 0.58, 1); }
@@ -457,11 +459,14 @@ nav {
   nav li a {
     color: #fff; }
 
+p {
+  font-family: 'Raleway'; }
+
 header {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  color: rgba(255, 255, 255, 0.7); }
+  color: #fff; }
   header h1 {
     font-family: "Roboto Condensed", "Cinzel Decorative", "Julius Sans One", "Alegreya Sans SC", "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-weight: 100; }
@@ -485,30 +490,19 @@ footer a {
   margin: 0; }
 
 header {
-  transform: translateY(-15%); }
-  header h1, header p {
-    border: 2px solid rgba(255, 255, 255, 0.7);
-    background-color: #1f1f14; }
-  header h1 {
-    padding: 5px 55px;
-    width: fit-content;
-    transform: translateY(50%) scale(0.7); }
-    @media (min-width: 640px) {
-      header h1 {
-        transform: translateY(50%); } }
-  header p {
-    padding: 5px 15px;
-    z-index: 2;
-    transform: translateY(30%) scale(0.7); }
-    @media (min-width: 640px) {
-      header p {
-        transform: translateY(60%); } }
+  transform: translateY(-15%);
+  background-image: url("../images/stars2.jpg");
+  background-size: cover; }
 
 main {
   min-height: 100vh; }
 
 body {
   background-color: #eeeee0; }
+
+.home-text {
+  margin: 0 .5em;
+  text-align: center; }
 
 .about,
 .music,
@@ -522,6 +516,11 @@ body {
   background-color: #eeeee0;
   border: 1px solid #1f1f14;
   border-radius: 8px; }
+  .about p,
+  .music p,
+  .booking p {
+    margin: 0 .5em;
+    text-align: center; }
 
 .show {
   display: block; }
@@ -541,7 +540,8 @@ body {
   height: 350px;
   width: fit-content;
   border-radius: 15px;
-  box-shadow: 1px 1px 5px #000; }
+  box-shadow: 1px 1px 5px #000;
+  margin-bottom: 2em; }
   .music-player iframe {
     border-radius: 15px;
     box-shadow: 1px 1px 5px #000;
@@ -560,6 +560,68 @@ footer {
   bottom: 0px; }
   footer a {
     transition: all .3s; }
+
+body {
+  background: #ffffff; }
+
+.module {
+  width: 400px;
+  position: relative;
+  transform: translateY(35%) scale(0.8);
+  transition: all 0.5s cubic-bezier(0.42, 0, 0.58, 1);
+  padding: 15px 55px;
+  box-sizing: padding-box;
+  position: relative;
+  border-right: 1px solid #fff;
+  border-top: 1px solid #fff;
+  border-left: 1px solid #fff; }
+  @media (min-width: 640px) {
+    .module {
+      transform: translateY(35%) scale(1); } }
+
+.module__top {
+  cursor: move;
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  position: absolute;
+  bottom: -7px;
+  left: 0; }
+  .module__top:before {
+    display: block;
+    content: "";
+    flex: 2 0 0;
+    border-top: 1px solid #fff; }
+  .module__top:after {
+    display: block;
+    content: "";
+    flex: 2 0 0;
+    border-top: 1px solid #fff; }
+
+.top__content {
+  height: 26px;
+  color: #fff;
+  font: 12px/32px Helvetica;
+  font-weight: bold;
+  overflow: hidden;
+  flex: 0 0 65px;
+  margin-top: -18px;
+  text-align: center;
+  margin-right: 10px;
+  margin-left: 10px; }
+
+.module__contents {
+  text-align: center;
+  height: 100%;
+  width: 100%;
+  margin: 0; }
+
+h1 {
+  margin: 0; }
+
+p {
+  margin: 0;
+  padding: 0px; }
 
 [class^=icon-] {
   display: block;
@@ -611,10 +673,10 @@ nav {
 
 .changeSubheading {
   transition: transform 0.5s cubic-bezier(0.42, 0, 0.58, 1);
-  transform: translateY(-25%) scale(0.7); }
+  transform: translateY(0%) scale(0.8); }
   @media (min-width: 640px) {
     .changeSubheading {
-      transform: translateY(9%); } }
+      transform: translateY(10%); } }
 
 .bar1, .bar2, .bar3 {
   width: 35px;

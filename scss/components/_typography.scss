@@ -9,9 +9,13 @@ nav {
 
 }
 
+p {
+  font-family: 'Raleway';
+}
+
 header {
   @include flexy(flex, column, null, center);
-  color: rgba(255,255,255,.7);
+  color: $white;
   & h1 {
     font-family: 'Roboto Condensed','Cinzel Decorative', 'Julius Sans One','Alegreya Sans SC',
     'Open Sans', $helvetica-font-stack;

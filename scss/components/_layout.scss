@@ -7,10 +7,7 @@ header {
 }
 
 
-main {
-  min-height: 100vh;
 
-}
 
 body {
   background-color: #eeeee0;
@@ -35,6 +32,8 @@ body {
   background-color: #eeeee0;
   border: 1px solid #1f1f14;
   border-radius: 8px;
+  overflow-y: scroll;
+  padding-bottom: 40px;
   & p {
     margin: 0 .5em;
     text-align: center;
@@ -97,6 +96,10 @@ footer {
 body {
   background: #ffffff;
 
+}
+
+main {
+  margin-bottom: 2em;
 }
 
 

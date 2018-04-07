@@ -494,9 +494,6 @@ header {
   background-image: url("../images/stars2.jpg");
   background-size: cover; }
 
-main {
-  min-height: 100vh; }
-
 body {
   background-color: #eeeee0; }
 
@@ -515,7 +512,9 @@ body {
   transform: translateX(100%);
   background-color: #eeeee0;
   border: 1px solid #1f1f14;
-  border-radius: 8px; }
+  border-radius: 8px;
+  overflow-y: scroll;
+  padding-bottom: 40px; }
   .about p,
   .music p,
   .booking p {
@@ -562,6 +561,9 @@ footer {
 
 body {
   background: #ffffff; }
+
+main {
+  margin-bottom: 2em; }
 
 .module {
   width: 400px;

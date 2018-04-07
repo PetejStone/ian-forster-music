@@ -1,8 +1,7 @@
 header {
-  transform: translateY(-15%);
+  transform: translateY(-15%) skewY(-2deg);
   background-image: url("../images/stars2.jpg");
   background-size: cover;
-
 
 }
 
@@ -93,10 +92,6 @@ footer {
 }
 
 
-body {
-  background: #ffffff;
-
-}
 
 main {
   margin-bottom: 2em;
@@ -108,7 +103,7 @@ main {
 .module {
   width: 400px;
   position: relative;
-  transform: translateY(35%) scale(.8);
+  transform: translateY(35%) scale(.8) skewY(2deg);
   transition: all .5s cubic-bezier(0.42, 0, 0.58, 1);
   @extend %center;
   padding: 15px 55px;
@@ -118,7 +113,7 @@ main {
   border-top: 1px solid $white;
   border-left: 1px solid $white;
   @include mq(medium){
-    transform: translateY(35%) scale(1);
+    transform: translateY(35%) scale(1) skewY(2deg);
   };
 }
 

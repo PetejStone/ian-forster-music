@@ -417,7 +417,7 @@ header {
 #nav-icon {
   display: inline-block;
   cursor: pointer;
-  transform: translateY(50%); }
+  transform: translateY(50%) skewY(2deg); }
 
 nav {
   letter-spacing: 1.5px;
@@ -425,7 +425,8 @@ nav {
   flex-direction: row;
   opacity: 0;
   pointer-events: none;
-  cursor: inherit; }
+  cursor: inherit;
+  transform: skewY(2deg); }
   nav li {
     transition: transform 2s ease-in;
     border-bottom: 1px solid #fff;
@@ -490,7 +491,7 @@ footer a {
   margin: 0; }
 
 header {
-  transform: translateY(-15%);
+  transform: translateY(-15%) skewY(-2deg);
   background-image: url("../images/stars2.jpg");
   background-size: cover; }
 
@@ -559,16 +560,13 @@ footer {
   footer a {
     transition: all .3s; }
 
-body {
-  background: #ffffff; }
-
 main {
   margin-bottom: 2em; }
 
 .module {
   width: 400px;
   position: relative;
-  transform: translateY(35%) scale(0.8);
+  transform: translateY(35%) scale(0.8) skewY(2deg);
   transition: all 0.5s cubic-bezier(0.42, 0, 0.58, 1);
   padding: 15px 55px;
   box-sizing: padding-box;
@@ -578,7 +576,7 @@ main {
   border-left: 1px solid #fff; }
   @media (min-width: 640px) {
     .module {
-      transform: translateY(35%) scale(1); } }
+      transform: translateY(35%) scale(1) skewY(2deg); } }
 
 .module__top {
   cursor: move;
@@ -660,10 +658,10 @@ nav {
 
 .changeNav {
   transition: all 0.5s cubic-bezier(0.42, 0, 0.58, 1);
-  transform: translateY(0%) scale(0.7); }
+  transform: translateY(0%) scale(0.7) skewY(2deg); }
   @media (min-width: 640px) {
     .changeNav {
-      transform: translateY(25%); } }
+      transform: translateY(25%) skewY(2deg); } }
 
 .changeHeading {
   transition: transform 0.5s cubic-bezier(0.42, 0, 0.58, 1);
@@ -674,10 +672,10 @@ nav {
 
 .changeSubheading {
   transition: transform 0.5s cubic-bezier(0.42, 0, 0.58, 1);
-  transform: translateY(0%) scale(0.8); }
+  transform: translateY(0%) scale(0.8) skewY(2deg); }
   @media (min-width: 640px) {
     .changeSubheading {
-      transform: translateY(10%); } }
+      transform: translateY(10%) skewY(2deg); } }
 
 .bar1, .bar2, .bar3 {
   width: 35px;

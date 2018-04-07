@@ -14,10 +14,10 @@ nav {
 
 .changeNav {
   transition: all .5s cubic-bezier(0.42, 0, 0.58, 1);
-  transform: translateY(0%) scale(.7);
+  transform: translateY(0%) scale(.7) skewY(2deg);
 
   @include mq(medium){
-    transform: translateY(25%);
+    transform: translateY(25%) skewY(2deg);
   }
 }
 
@@ -31,9 +31,9 @@ nav {
 
 .changeSubheading {
   transition: transform .5s cubic-bezier(0.42, 0, 0.58, 1);
-  transform: translateY(0%) scale(.8);
+  transform: translateY(0%) scale(.8) skewY(2deg);
   @include mq(medium){
-    transform: translateY(10%);
+    transform: translateY(10%) skewY(2deg);
   }
 }
 

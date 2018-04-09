@@ -444,9 +444,9 @@ nav {
   justify-content: center;
   width: 50%;
   margin: 0 auto;
-  padding: 0;
+  padding-left: 20px;
   max-width: 800px;
-  transform: scale(0.6); }
+  margin-bottom: 1em; }
   .social-nav li {
     margin-right: 15px; }
 
@@ -627,7 +627,7 @@ p {
 
 [class^=icon-] {
   display: block;
-  width: 25px;
+  width: 15px;
   height: 25px;
   background: url("../icons/sprite.svg");
   text-indent: 100%;
@@ -639,16 +639,13 @@ p {
     opacity: 1; }
 
 .icon-instagram {
-  background-position: -41px 0; }
+  background-position: -31px -24px; }
 
 .icon-facebook {
-  background-position: 0 0; }
+  background-position: 0 68px; }
 
-.icon-github {
-  background-position: -82px 0; }
-
-.icon-linkedin {
-  background-position: -123px 0; }
+.icon-spotify {
+  background-position: -62px -24px; }
 
 nav {
   transition: all 0.5s cubic-bezier(0.42, 0, 0.58, 1);

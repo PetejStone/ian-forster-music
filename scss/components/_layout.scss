@@ -1,6 +1,6 @@
 header {
   transform: translateY(-15%) skewY(-2deg);
-  background-image: url("../images/stars2.jpg");
+  // background-image: url("../images/stars2.jpg");
   background-size: cover;
 
 }
@@ -9,7 +9,11 @@ header {
 
 
 body {
-  background-color: #eeeee0;
+  background-image: url("../images/stars2.jpg"), url("../images/ocean.jpg");
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-position: top, bottom;
+  background-color: $black;
 }
 
 .home-text{
@@ -95,6 +99,7 @@ footer {
 
 main {
   margin-bottom: 2em;
+  height: 100vh;
 }
 
 

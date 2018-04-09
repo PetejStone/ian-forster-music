@@ -489,13 +489,11 @@ footer a {
 
 header {
   transform: translateY(-15%) skewY(-2deg);
-  background-size: cover; }
+  background-image: url("../images/stars2.jpg");
+  background-size: cover;
+  height: 30em; }
 
 body {
-  background-image: url("../images/stars2.jpg"), url("../images/ocean.jpg");
-  background-size: 100%;
-  background-repeat: no-repeat;
-  background-position: top, bottom;
   background-color: #000; }
 
 .home-content {
@@ -539,8 +537,8 @@ body {
   cursor: pointer; }
 
 .music-player {
-  height: 350px;
-  width: fit-content;
+  height: 300px;
+  width: 90%;
   border-radius: 15px;
   box-shadow: 1px 1px 5px #000;
   margin-top: 2em; }
@@ -563,7 +561,7 @@ footer {
 
 main {
   margin-bottom: 2em;
-  height: 100vh; }
+  height: 100%; }
 
 .module {
   width: 400px;

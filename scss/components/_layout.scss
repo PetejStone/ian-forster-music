@@ -1,18 +1,16 @@
 header {
   transform: translateY(-15%) skewY(-2deg);
-  // background-image: url("../images/stars2.jpg");
+  background-image: url("../images/stars2.jpg");
   background-size: cover;
-
+  height: 30em;
 }
 
 
 
 
 body {
-  background-image: url("../images/stars2.jpg"), url("../images/ocean.jpg");
-  background-size: 100%;
-  background-repeat: no-repeat;
-  background-position: top, bottom;
+
+
   background-color: $black;
 }
 
@@ -67,8 +65,8 @@ body {
 }
 
 .music-player {
-  height: 350px;
-  width: fit-content;
+  height: 300px;
+  width: 90%;
   border-radius: 15px;
   box-shadow: 1px 1px 5px $black;
   @extend %center;
@@ -100,7 +98,7 @@ footer {
 
 main {
   margin-bottom: 2em;
-  height: 100vh;
+  height: 100%;
 }
 
 
@@ -180,5 +178,4 @@ p {
 
 .stop-scrolling {
   overflow-y: hidden;
-
 }

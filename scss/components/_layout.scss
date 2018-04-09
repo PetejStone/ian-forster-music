@@ -16,7 +16,7 @@ body {
   background-color: $black;
 }
 
-.home-text{
+.home-content{
   margin: 0 .5em;
   text-align: center;
 }
@@ -32,10 +32,12 @@ body {
   top: 0;
   display: none;
   transform: translateX(100%);
-  background-color: #eeeee0;
-  border: 1px solid #1f1f14;
+  background-color: $black;
+  color: $white;
+  border: 1px solid $white;
   border-radius: 8px;
-  overflow-y: scroll;
+  overflow-y: scroll;;
+  opacity: .9;
   padding-bottom: 40px;
   & p {
     margin: 0 .5em;
@@ -55,7 +57,7 @@ body {
   font-family: 'Roboto Condensed','Cinzel Decorative', 'Julius Sans One','Alegreya Sans SC',
   'Open Sans', $helvetica-font-stack;
   font-weight: 100;
-  color: #1f1f14;
+  color: $white;
   display: inline;
   padding: 10px;
   margin: 0;
@@ -86,7 +88,6 @@ footer {
   color: $white;
   width: 100%;
   height: 40px;
-  background: #1f1f14;
   @include flexy(flex,column);
   position: relative;
   bottom: 0px;
@@ -175,4 +176,9 @@ h1 {
 p {
   margin: 0;
   padding: 0px;
+}
+
+.stop-scrolling {
+  overflow-y: hidden;
+
 }

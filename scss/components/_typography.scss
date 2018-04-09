@@ -11,6 +11,7 @@ nav {
 
 p {
   font-family: 'Raleway';
+  color: $white;
 }
 
 header {
@@ -32,7 +33,7 @@ header {
 .page-heading {
   font-family:  'Roboto Condensed','Cinzel Decorative', 'Julius Sans One','Alegreya Sans SC',
   'Open Sans', $helvetica-font-stack;
-  color: #1f1f14;
+  color: $white;
   margin-top: 5em;
   text-align: center;
 }
@@ -44,6 +45,5 @@ footer a {
   font-weight: $font-weight--thin;
   color: $white;
   text-align: center;
-  opacity: .7;
   margin: 0;
 }

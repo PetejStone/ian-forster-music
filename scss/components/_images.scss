@@ -1,0 +1,48 @@
+.home-images {
+  img {
+      transform: scale(.8);
+      opacity: 1;
+      display: block;
+      max-width: 100%;
+      box-shadow: 0px 0px 8px bisque;
+      &:nth-child(1n) {
+        margin: 0 auto;
+      }
+      &:nth-child(2n) {
+        float: left;
+        width: 45%;
+      }
+      &:nth-child(3n) {
+        width: 45%;
+      }
+    }
+}
+
+.about,
+.booking {
+  img {
+    display: block;
+    @extend %center;
+    max-width: 100%;
+    width: 439.2px;
+    height: 652.8px;
+    padding: 12px;
+    margin-top: 20px;
+    box-shadow: 0px 0px 8px bisque;
+
+  }
+}
+
+.music {
+  img {
+    display: block;
+    width: 400px;
+    height: 400px;
+    max-width: 100%;
+    padding: 12px;
+    @extend %center;
+    margin-top: 20px;
+    box-shadow: 0px 0px 8px bisque;
+  }
+
+}

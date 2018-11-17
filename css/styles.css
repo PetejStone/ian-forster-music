@@ -1,4 +1,9 @@
-#nav-icon, nav, .music-player, .module {
+#nav-icon, nav ul, .about p,
+.music p,
+.booking p, .about a,
+.music a,
+.booking a, .music-player, .module, .about img,
+.booking img, .music img {
   margin: 0 auto; }
 
 * {
@@ -414,18 +419,19 @@ header {
 
 #nav-icon {
   display: inline-block;
-  cursor: pointer;
-  transform: translateY(50%) skewY(2deg); }
+  cursor: pointer; }
 
-nav {
+nav ul {
   letter-spacing: 1.5px;
   display: flex;
   flex-direction: row;
+  justify-content: center;
+  padding-left: 0px;
   opacity: 0;
   pointer-events: none;
   cursor: inherit;
   transform: skewY(2deg); }
-  nav li {
+  nav ul li {
     transition: transform 2s ease-in;
     border-bottom: 1px solid #fff;
     width: fit-content;
@@ -457,9 +463,9 @@ nav {
   nav li a {
     color: #fff; }
 
-p {
-  font-family: 'Raleway';
-  color: #fff; }
+p,
+a {
+  font-family: 'Raleway'; }
 
 header {
   display: flex;
@@ -491,14 +497,30 @@ header {
   transform: translateY(-15%) skewY(-2deg);
   background-image: url("../images/stars2.jpg");
   background-size: cover;
-  height: 30em; }
+  height: 220px; }
+  @media (min-width: 640px) {
+    header {
+      height: 15em; } }
+  @media (min-width: 1024px) {
+    header {
+      height: 20em; } }
 
 body {
+  transition: all 0.5s cubic-bezier(0.42, 0, 0.58, 1);
   background-color: #000; }
 
 .home-content {
   margin: 0 .5em;
-  text-align: center; }
+  text-align: center;
+  z-index: 0; }
+
+.intro {
+  font-size: 16px;
+  width: 75%;
+  margin: 0 auto; }
+  @media (min-width: 640px) {
+    .intro {
+      font-size: 20px; } }
 
 .about,
 .music,
@@ -509,18 +531,41 @@ body {
   top: 0;
   display: none;
   transform: translateX(100%);
-  background-color: #000;
+  background-color: rgba(0, 0, 0, 0.9);
   color: #fff;
   border: 1px solid #fff;
   border-radius: 8px;
-  overflow-y: scroll;
-  opacity: .9;
-  padding-bottom: 40px; }
+  overflow: scroll;
+  padding-bottom: 40px;
+  z-index: 1000; }
   .about p,
   .music p,
   .booking p {
-    margin: 0 .5em;
-    text-align: center; }
+    text-align: center;
+    width: 75%; }
+  .about a,
+  .music a,
+  .booking a {
+    text-decoration: none;
+    list-style-type: none;
+    color: #000;
+    font-family: "Raleway";
+    text-align: center;
+    text-decoration: underline;
+    display: block;
+    width: fit-content;
+    margin-top: 12px;
+    margin-bottom: 8px;
+    padding: 10px;
+    background-color: #fff;
+    border-radius: 9px;
+    margin-top: 12px;
+    transition: all .3s;
+    cursor: pointer; }
+    .about a:hover,
+    .music a:hover,
+    .booking a:hover {
+      transform: scale(1.02); }
 
 .show {
   display: block; }
@@ -534,17 +579,15 @@ body {
   margin: 0;
   position: absolute;
   top: 0px;
-  cursor: pointer; }
+  cursor: pointer;
+  text-align: left !important; }
 
 .music-player {
   height: 300px;
   width: 90%;
   border-radius: 15px;
-  box-shadow: 1px 1px 5px #000;
   margin-top: 2em; }
   .music-player iframe {
-    border-radius: 15px;
-    box-shadow: 1px 1px 5px #000;
     width: 100%;
     height: 100%; }
 
@@ -569,7 +612,7 @@ main {
   transform: translateY(35%) scale(0.8) skewY(2deg);
   transition: all 0.5s cubic-bezier(0.42, 0, 0.58, 1);
   padding: 15px 55px;
-  box-sizing: padding-box;
+  box-sizing: border-box;
   position: relative;
   border-right: 1px solid #fff;
   border-top: 1px solid #fff;
@@ -625,6 +668,10 @@ p {
 .stop-scrolling {
   overflow-y: hidden; }
 
+#player,
+.video-stream {
+  max-width: 100%; }
+
 [class^=icon-] {
   display: block;
   width: 15px;
@@ -658,10 +705,19 @@ nav {
 
 .changeNav {
   transition: all 0.5s cubic-bezier(0.42, 0, 0.58, 1);
-  transform: translateY(0%) scale(0.7) skewY(2deg); }
+  transform: translateY(115%) scale(1.2) skewY(2deg); }
   @media (min-width: 640px) {
     .changeNav {
-      transform: translateY(25%) skewY(2deg); } }
+      transform: translateY(150%) skewY(2deg); } }
+
+#nav-icon {
+  transform: translateY(50%) skewY(2deg); }
+  @media (min-width: 640px) {
+    #nav-icon {
+      transform: translateY(115%) skewY(2deg); } }
+
+#nav {
+  transition: all 0.5s cubic-bezier(0.42, 0, 0.58, 1); }
 
 .changeHeading {
   transition: transform 0.5s cubic-bezier(0.42, 0, 0.58, 1);
@@ -704,7 +760,9 @@ nav {
 
 .slideIn {
   transform: translateX(0%);
-  max-width: 1500px; }
+  max-width: 1500px;
+  margin-bottom: 15em;
+  overflow: scroll; }
 
 footer > a:hover {
   transform: scale(1.03);
@@ -713,5 +771,38 @@ footer > a:hover {
 
 nav li:hover {
   transform: scale(1.05); }
+
+.home-images img {
+  transform: scale(0.8);
+  opacity: 1;
+  display: block;
+  max-width: 100%;
+  box-shadow: 0px 0px 8px bisque; }
+  .home-images img:nth-child(1n) {
+    margin: 0 auto; }
+  .home-images img:nth-child(2n) {
+    float: left;
+    width: 45%; }
+  .home-images img:nth-child(3n) {
+    width: 45%; }
+
+.about img,
+.booking img {
+  display: block;
+  max-width: 100%;
+  width: 439.2px;
+  height: 652.8px;
+  padding: 12px;
+  margin-top: 20px;
+  box-shadow: 0px 0px 8px bisque; }
+
+.music img {
+  display: block;
+  width: 400px;
+  height: 400px;
+  max-width: 100%;
+  padding: 12px;
+  margin-top: 20px;
+  box-shadow: 0px 0px 8px bisque; }
 
 /*# sourceMappingURL=styles.css.map */

@@ -14,13 +14,24 @@ nav {
 
 .changeNav {
   transition: all .5s cubic-bezier(0.42, 0, 0.58, 1);
-  transform: translateY(0%) scale(.7) skewY(2deg);
+  transform: translateY(115%) scale(1.2) skewY(2deg);
 
   @include mq(medium){
-    transform: translateY(25%) skewY(2deg);
+    transform: translateY(150%) skewY(2deg);
+
   }
 }
 
+#nav-icon {
+  transform: translateY(50%) skewY(2deg);
+  @include mq(medium) {
+    transform: translateY(115%) skewY(2deg);
+  }
+}
+
+#nav {
+  transition: all .5s cubic-bezier(0.42, 0, 0.58, 1);
+}
 .changeHeading {
   transition: transform .5s cubic-bezier(0.42, 0, 0.58, 1);
   transform: translateY(25%) scale(.7);
@@ -70,6 +81,8 @@ nav {
 .slideIn {
   transform: translateX(0%);
   max-width: 1500px;
+  margin-bottom: 15em;
+  overflow: scroll;
 }
 
 footer > a:hover, {

@@ -26,20 +26,23 @@ header {
   display: inline-block;
   cursor: pointer;
   @extend %center;
-  transform: translateY(50%) skewY(2deg);
+  
 }
 
 
 
-nav {
+nav ul {
   letter-spacing: 1.5px;
   display: flex;
   flex-direction: row;
+  justify-content: center;
+  padding-left: 0px;
   @extend %center;
   opacity: 0;
   pointer-events: none;
   cursor: inherit;
   transform: skewY(2deg);
+  @extend %center;
   & li {
     transition: transform 2s ease-in;
     border-bottom: 1px solid #fff;

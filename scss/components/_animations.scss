@@ -23,9 +23,9 @@ nav {
 }
 
 #nav-icon {
-  transform: translateY(50%) skewY(2deg);
+  transform: translateY(25%) skewY(2deg);
   @include mq(medium) {
-    transform: translateY(115%) skewY(2deg);
+    transform: translateY(60%) skewY(2deg);
   }
 }
 
@@ -82,7 +82,15 @@ nav {
   transform: translateX(0%);
   max-width: 1500px;
   margin-bottom: 15em;
-  overflow: scroll;
+  overflow-y: scroll;
+  height: calc(100% + 1px);
+  -webkit-transform: translateZ(0px);
+  -webkit-transform: translate3d(0,0,0);
+  -webkit-perspective: 1000;
+}
+
+* {
+  -webkit-overflow-scrolling: touch !important;
 }
 
 footer > a:hover, {

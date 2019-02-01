@@ -51,23 +51,23 @@ navIcon.addEventListener('click',()=> {
 
 
 
-  // slides the content out by toggling the class of 'slide in'
+  // slides the content out by toggling the class of 'slide in' for touchscreens
   for (let i=0; i < closeButton.length; i++) {
     closeButton[i].addEventListener('touchmove', ()=> {
       mainContent[i].classList.toggle('slideIn');
 
       homeContent.style.position = 'initial';
-      footer.style.display = 'initial';
+      footer.style.display = 'relative';
 
     });
   }
-
+//slides the content out by clicking (desktop)
   for (let i=0; i < closeButton.length; i++) {
     closeButton[i].addEventListener('click', ()=> {
       mainContent[i].classList.toggle('slideIn');
 
       homeContent.style.position = 'initial';
-      footer.style.display = 'initial';
+      footer.style.display = 'relative';
 
     });
   }

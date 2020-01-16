@@ -57,7 +57,7 @@ navIcon.addEventListener('click',()=> {
       mainContent[i].classList.toggle('slideIn');
 
       homeContent.style.position = 'initial';
-      footer.style.display = 'relative';
+      footer.style.display = 'flex';
 
     });
   }
@@ -67,7 +67,7 @@ navIcon.addEventListener('click',()=> {
       mainContent[i].classList.toggle('slideIn');
 
       homeContent.style.position = 'initial';
-      footer.style.display = 'relative';
+      footer.style.display = 'flex';
 
     });
   }
